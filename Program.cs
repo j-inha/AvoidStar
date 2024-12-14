@@ -32,12 +32,17 @@ namespace Study
 
             // 콘솔 커서를 안보이게 해줘 C#언어 visual 2022 miscrosoft c#
             Console.CursorVisible = false;
+            Random random = new Random();
+            int x = 14, y = 28; //player position
+            int Ex = random.Next(0, 28), Ey = 0; //Enemy position
+            bool Enermy = false; //star alive : true / star dead : false
+            
 
-            int x = 14, y = 28;
 
             while (true)
             {
-                //Console.Clear();    
+                
+                Console.Clear();    
                 Console.SetCursorPosition(x, y);
                 // draw player position
                 Console.Write("◆");
@@ -109,6 +114,35 @@ namespace Study
 
                 }
 
+                if (!Enermy)
+                {
+                    Enermy = true;
+                }
+                Console.SetCursorPosition(Ex, Ey);
+                Console.Write("★");
+
+                if (Enermy)
+                {
+                    Ey = Ey + 1;
+                }
+                if (Ey >= 28)
+                {
+                    Enermy = false;
+                    Ey = 0;
+                    Ex = random.Next(0, 28);
+
+               
+                }
+
+
+                if (x == Ex && y == Ey)
+                {
+                    Console.SetCursorPosition(10,15);
+                    Console.WriteLine("Game over");
+                    break;
+                }
+                //게임을 꺼버릴수도있고 다시 계속 재생할 수도 있음
+                Thread.Sleep(50);
             }
 
             Console.ReadKey();
