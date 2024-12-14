@@ -7,17 +7,25 @@
       "RelativeMoniker": "D:0:0:{A6A72FF2-4A03-4AA7-A43A-9835CD3DA9E2}|AvoidStar.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A6A72FF2-4A03-4AA7-A43A-9835CD3DA9E2}|AvoidStar.csproj|c:\\users\\administrator\\desktop\\avoidstar\\avoidstar.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A6A72FF2-4A03-4AA7-A43A-9835CD3DA9E2}|AvoidStar.csproj|solutionrelative:avoidstar.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\Desktop\\Basic_data\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ED31B0D-D053-46D7-9150-772A4EADCC26}|review\\review.csproj|c:\\users\\administrator\\desktop\\avoidstar\\review\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ED31B0D-D053-46D7-9150-772A4EADCC26}|review\\review.csproj|solutionrelative:review\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A6A72FF2-4A03-4AA7-A43A-9835CD3DA9E2}|AvoidStar.csproj|c:\\users\\administrator\\desktop\\avoidstar\\secondclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6A72FF2-4A03-4AA7-A43A-9835CD3DA9E2}|AvoidStar.csproj|solutionrelative:secondclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{441832A1-F565-40DF-9396-41644D43CDA8}|..\\review\\review.csproj|c:\\users\\administrator\\desktop\\review\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\Desktop\\review\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A688D5D0-299C-487E-AB2B-FAA70B9AC2A0}|..\\Basic_data\\Basic_data.csproj|c:\\users\\administrator\\desktop\\basic_data\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A688D5D0-299C-487E-AB2B-FAA70B9AC2A0}|..\\Basic_data\\Basic_data.csproj|c:\\users\\administrator\\desktop\\basic_data\\basic_data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\Desktop\\Basic_data\\Basic_data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,7 +35,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,20 +63,44 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AvoidStar",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\AvoidStar\\AvoidStar.csproj",
+              "RelativeDocumentMoniker": "AvoidStar.csproj",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\AvoidStar\\AvoidStar.csproj",
+              "RelativeToolTip": "AvoidStar.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-14T08:36:35.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\AvoidStar\\review\\Program.cs",
+              "RelativeDocumentMoniker": "review\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\AvoidStar\\review\\Program.cs",
+              "RelativeToolTip": "review\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T08:36:32.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Basic_data\\Program.cs",
               "RelativeDocumentMoniker": "..\\Basic_data\\Program.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\Basic_data\\Program.cs",
               "RelativeToolTip": "..\\Basic_data\\Program.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAgwB4AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T06:20:24.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T06:20:24.163Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "SecondClass.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\AvoidStar\\SecondClass.cs",
               "RelativeDocumentMoniker": "SecondClass.cs",
@@ -76,8 +108,7 @@
               "RelativeToolTip": "SecondClass.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T06:29:44.632Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T06:29:44.632Z"
             },
             {
               "$type": "Document",
@@ -87,14 +118,14 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\AvoidStar\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAqAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwHIAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T06:16:41.062Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\review\\Program.cs",
               "RelativeDocumentMoniker": "..\\review\\Program.cs",
@@ -102,21 +133,19 @@
               "RelativeToolTip": "..\\review\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T08:25:38.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T08:25:38.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Basic_data",
+              "DocumentIndex": 6,
+              "Title": "Basic_data.csproj",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Basic_data\\Basic_data.csproj",
               "RelativeDocumentMoniker": "..\\Basic_data\\Basic_data.csproj",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\Basic_data\\Basic_data.csproj",
               "RelativeToolTip": "..\\Basic_data\\Basic_data.csproj",
               "ViewState": "AQIAAAEAAAAAAAAAAAAAAAkAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-14T06:30:53.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T06:30:53.013Z"
             }
           ]
         }

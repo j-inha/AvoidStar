@@ -114,6 +114,7 @@ namespace Study
 
                 }
 
+                
                 if (!Enermy)
                 {
                     Enermy = true;
