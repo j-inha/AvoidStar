@@ -36,7 +36,20 @@ namespace Study
             int x = 14, y = 28; //player position
             int Ex = random.Next(0, 28), Ey = 0; //Enemy position
             bool Enermy = false; //star alive : true / star dead : false
-            
+
+            //별이 다중으로 내려오게 하는 방법
+            //int[] Exs = new int[] { random.Next(0, 28), random.Next(0, 28) };
+            int[] Exs = new int[4];
+            int[] Exy = new int[4];
+
+            for (int i = 0; i < Exs.Length; i++)
+            {
+                Exs[i] = random.Next(0,28);
+            }
+            for (int i = 0; i < Exy.Length; i++)
+            {
+                Exy[i] = 0;
+            }
 
 
             while (true)
@@ -48,7 +61,7 @@ namespace Study
                 Console.Write("◆");
 
 
-
+                //동작키
                 if (Console.KeyAvailable)
                 {
                     var key = Console.ReadKey(true).Key;
@@ -113,7 +126,7 @@ namespace Study
 
 
                 }
-
+                //
                 
                 if (!Enermy)
                 {
@@ -122,17 +135,34 @@ namespace Study
                 Console.SetCursorPosition(Ex, Ey);
                 Console.Write("★");
 
-                if (Enermy)
+                for (int i = 0; i < Exs.Length; i++)
                 {
-                    Ey = Ey + 1;
+                    Console.SetCursorPosition(Exs[i], Exy[i]);
+                    Console.Write("★");
+                }
+
+                    if (Enermy)
+                {
+                    Ey = Ey + random.Next(0, 2);
+                    for (int i = 0; i < 4; i++)
+                    {
+                        Exy[i] = Exy[i] + random.Next(0,2); // 별들의 개별 속도 조절
+                    }
                 }
                 if (Ey >= 28)
                 {
                     Enermy = false;
                     Ey = 0;
                     Ex = random.Next(0, 28);
+                    for (int i = 0; i < Exs.Length; i++)
+                    {
+                        Exs[i] = random.Next(0, 28);
+                    }
+                    for (int i = 0; i < Exy.Length; i++)
+                    {
+                        Exy[i] = 0;
+                    }
 
-               
                 }
 
 
@@ -141,6 +171,17 @@ namespace Study
                     Console.SetCursorPosition(10,15);
                     Console.WriteLine("Game over");
                     break;
+                }
+                for (int i = 0; i < Exs.Length; i++)
+                {
+                    if (x == Exs[i] && y == Exy[i])
+                    {
+                        Console.SetCursorPosition(10, 15);
+                        Console.WriteLine("Game over");
+                        break;
+           
+                    }
+                 
                 }
                 //게임을 꺼버릴수도있고 다시 계속 재생할 수도 있음
                 Thread.Sleep(50);
