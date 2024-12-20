@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\AvoidStar\\AvoidStar.csproj",
+      "projectUniqueName": "D:\\CordingC#\\AvoidStar\\AvoidStar.csproj",
       "projectName": "AvoidStar",
-      "projectPath": "D:\\AvoidStar\\AvoidStar.csproj",
+      "projectPath": "D:\\CordingC#\\AvoidStar\\AvoidStar.csproj",
       "packagesPath": "C:\\Users\\inhaj\\.nuget\\packages\\",
-      "outputPath": "D:\\AvoidStar\\obj\\",
+      "outputPath": "D:\\CordingC#\\AvoidStar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

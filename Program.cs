@@ -149,22 +149,22 @@ namespace Study
                         Exy[i] = Exy[i] + random.Next(0,2); // 별들의 개별 속도 조절
                     }
                 }
+                //개별적으로 하늘에서 떨어지는 위치 정하기
                 if (Ey >= 28)
                 {
                     Enermy = false;
                     Ey = 0;
                     Ex = random.Next(0, 28);
-                    for (int i = 0; i < Exs.Length; i++)
-                    {
-                        Exs[i] = random.Next(0, 28);
-                    }
-                    for (int i = 0; i < Exy.Length; i++)
-                    {
-                        Exy[i] = 0;
-                    }
 
                 }
-
+                for (int i = 0; i < Exs.Length; i++) 
+                {
+                    if (Exy[i] >= 28)
+                    {
+                        Exs[i] = random.Next(0, 28);
+                        Exy[i] = 0;
+                    }
+                }
 
                 if (x == Ex && y == Ey)
                 {
@@ -172,17 +172,50 @@ namespace Study
                     Console.WriteLine("Game over");
                     break;
                 }
-                for (int i = 0; i < Exs.Length; i++)
+                //배열 각각에 설정
+                if (x == Exs[0] && y == Exy[0])
+                {
+                    Console.SetCursorPosition(10, 15);
+                    Console.WriteLine("Game over");
+                    break;
+                }
+                if (x == Exs[1] && y == Exy[1])
+                {
+                    Console.SetCursorPosition(10, 15);
+                    Console.WriteLine("Game over");
+                    break;
+
+                }
+                if (x == Exs[2] && y == Exy[2])
+                {
+                    Console.SetCursorPosition(10, 15);
+                    Console.WriteLine("Game over");
+                    break;
+
+                }
+                if (x == Exs[3] && y == Exy[3])
+                {
+                    Console.SetCursorPosition(10, 15);
+                    Console.WriteLine("Game over");
+                    break;
+                }
+                /*for (int i = 0; i < Exs.Length; i++)
                 {
                     if (x == Exs[i] && y == Exy[i])
                     {
                         Console.SetCursorPosition(10, 15);
                         Console.WriteLine("Game over");
+                        Thread.Sleep(50);
                         break;
-           
+
+
                     }
-                 
-                }
+                */
+
+
+
+
+
                 //게임을 꺼버릴수도있고 다시 계속 재생할 수도 있음
                 Thread.Sleep(50);
             }
