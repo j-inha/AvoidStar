@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AvoidStar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad41e36503d64db8be5f8e186aeadbd8cf16f0c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a616b1bfd284f13d167c5a467e4bb2910c0440e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("AvoidStar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AvoidStar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

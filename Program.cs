@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace JIH
 {
@@ -18,13 +19,16 @@ namespace Study
 {
     class MyProgram
     {
+
         public static void Play()
         {
+            int vertical = 30;
+            int horizontal = 30;
             // 게임 시작
             // 타이틀 변경
             Console.Title = "별 피하기";
             // 콘솔 크기 변경
-            Console.SetWindowSize(30, 30);
+            Console.SetWindowSize(vertical, horizontal);
             // 콘솔창의 아래 중앙에 캐릭터가 위치하게 하는것
             // -> 콘솔의 x좌표 14, y좌표 28에 그려줘
             Console.SetCursorPosition(14, 28);
@@ -32,19 +36,22 @@ namespace Study
 
             // 콘솔 커서를 안보이게 해줘 C#언어 visual 2022 miscrosoft c#
             Console.CursorVisible = false;
+            //몬스터의 수
+            int enemyCount = 6;
+
             Random random = new Random();
-            int x = 14, y = 28; //player position
-            int Ex = random.Next(0, 28), Ey = 0; //Enemy position
+            int x = vertical / 2, y = horizontal - 2; //player position
+            bool playerDead = false;
             bool Enermy = false; //star alive : true / star dead : false
 
             //별이 다중으로 내려오게 하는 방법
             //int[] Exs = new int[] { random.Next(0, 28), random.Next(0, 28) };
-            int[] Exs = new int[4];
-            int[] Exy = new int[4];
+            int[] Exs = new int[enemyCount];
+            int[] Exy = new int[enemyCount];
 
             for (int i = 0; i < Exs.Length; i++)
             {
-                Exs[i] = random.Next(0,28);
+                Exs[i] = random.Next(0, 28);
             }
             for (int i = 0; i < Exy.Length; i++)
             {
@@ -54,8 +61,8 @@ namespace Study
 
             while (true)
             {
-                
-                Console.Clear();    
+
+                Console.Clear();
                 Console.SetCursorPosition(x, y);
                 // draw player position
                 Console.Write("◆");
@@ -69,7 +76,7 @@ namespace Study
                     Console.Write("  ");
 
                     // change player position
-                    if(key == ConsoleKey.UpArrow)
+                    if (key == ConsoleKey.UpArrow)
                     {
                         y--;
                         if (y < 0) y = 0;
@@ -92,7 +99,7 @@ namespace Study
                     if (key == ConsoleKey.X)
                     {
                         y++;
-                        if (y > 30) y = 30;
+                        if (y > vertical) y = vertical;
 
                     }
 
@@ -113,7 +120,7 @@ namespace Study
                     if (key == ConsoleKey.RightArrow)
                     {
                         x++;
-                        if (x > 30) x = 30;
+                        if (x > horizontal) x = horizontal;
 
                     }
                     if (key == ConsoleKey.D)
@@ -127,37 +134,29 @@ namespace Study
 
                 }
                 //
-                
+
                 if (!Enermy)
                 {
                     Enermy = true;
                 }
-                Console.SetCursorPosition(Ex, Ey);
-                Console.Write("★");
 
                 for (int i = 0; i < Exs.Length; i++)
                 {
                     Console.SetCursorPosition(Exs[i], Exy[i]);
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write("★");
+                    Console.ResetColor();
                 }
 
-                    if (Enermy)
+                if (Enermy)
                 {
-                    Ey = Ey + random.Next(0, 2);
-                    for (int i = 0; i < 4; i++)
+                    for (int i = 0; i < Exs.Length; i++)
                     {
-                        Exy[i] = Exy[i] + random.Next(0,2); // 별들의 개별 속도 조절
+                        Exy[i] = Exy[i] + random.Next(0, 2); // 별들의 개별 속도 조절
                     }
                 }
                 //개별적으로 하늘에서 떨어지는 위치 정하기
-                if (Ey >= 28)
-                {
-                    Enermy = false;
-                    Ey = 0;
-                    Ex = random.Next(0, 28);
-
-                }
-                for (int i = 0; i < Exs.Length; i++) 
+                for (int i = 0; i < Exs.Length; i++)
                 {
                     if (Exy[i] >= 28)
                     {
@@ -166,51 +165,33 @@ namespace Study
                     }
                 }
 
-                if (x == Ex && y == Ey)
-                {
-                    Console.SetCursorPosition(10,15);
-                    Console.WriteLine("Game over");
-                    break;
-                }
-                //배열 각각에 설정
-                if (x == Exs[0] && y == Exy[0])
-                {
-                    Console.SetCursorPosition(10, 15);
-                    Console.WriteLine("Game over");
-                    break;
-                }
-                if (x == Exs[1] && y == Exy[1])
-                {
-                    Console.SetCursorPosition(10, 15);
-                    Console.WriteLine("Game over");
-                    break;
-
-                }
-                if (x == Exs[2] && y == Exy[2])
-                {
-                    Console.SetCursorPosition(10, 15);
-                    Console.WriteLine("Game over");
-                    break;
-
-                }
-                if (x == Exs[3] && y == Exy[3])
-                {
-                    Console.SetCursorPosition(10, 15);
-                    Console.WriteLine("Game over");
-                    break;
-                }
-                /*for (int i = 0; i < Exs.Length; i++)
+                for (int i = 0; i < Exs.Length; i++)
                 {
                     if (x == Exs[i] && y == Exy[i])
                     {
                         Console.SetCursorPosition(10, 15);
-                        Console.WriteLine("Game over");
+                        Console.WriteLine("game over");
                         Thread.Sleep(50);
+                        playerDead = true;
                         break;
 
 
                     }
-                */
+                }
+                if (playerDead)
+                {
+
+                    Console.WriteLine("게임을 재시작 하려면 z키를 누르세요");
+                    var keys = Console.ReadKey(true).Key;
+
+                    if (keys == ConsoleKey.Z)
+                    {
+                        Play();
+                    }
+                    else { break; }
+
+                }
+                   
 
 
 
@@ -220,7 +201,7 @@ namespace Study
                 Thread.Sleep(50);
             }
 
-            Console.ReadKey();
+            Console.ReadKey();//무엇인가 입력하면 다음코드가 실행
         }
     }
 }
